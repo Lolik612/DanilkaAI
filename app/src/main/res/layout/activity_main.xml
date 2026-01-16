@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0a0a0a"
+    android:padding="10dp">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DANILKA AI"
+        android:textColor="#00ff88"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="10dp" />
+    
+    <RadioGroup
+        android:id="@+id/mode_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        
+        <RadioButton
+            android:id="@+id/mode_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ТЕКСТ"
+            android:textColor="#00ff88"
+            android:buttonTint="#00ff88"
+            android:checked="true" />
+            
+        <RadioButton
+            android:id="@+id/mode_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="КОД"
+            android:textColor="#0088ff"
+            android:buttonTint="#0088ff" />
+            
+        <RadioButton
+            android:id="@+id/mode_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ИЗОБРАЖЕНИЯ"
+            android:textColor="#ff8800"
+            android:buttonTint="#ff8800" />
+            
+        <RadioButton
+            android:id="@+id/mode_hack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ХАКИНГ"
+            android:textColor="#ff0055"
+            android:buttonTint="#ff0055" />
+    </RadioGroup>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp">
+        
+        <TextView
+            android:id="@+id/output_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#00ff88"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:background="#111111" />
+    </ScrollView>
+    
+    <ImageView
+        android:id="@+id/result_image"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:layout_gravity="center"
+        android:background="#222222"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="10dp" />
+    
+    <EditText
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите запрос..."
+        android:textColor="#ffffff"
+        android:textColorHint="#666666"
+        android:background="#222222"
+        android:padding="12dp"
+        android:layout_marginBottom="10dp" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="ОТПРАВИТЬ"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:background="#00ff88"
+            android:layout_marginEnd="5dp"
+            android:enabled="false" />
+            
+        <Button
+            android:id="@+id/generate_image_button"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="🎨 ГЕНЕРИРОВАТЬ"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:background="#ff8800"
+            android:layout_marginStart="5dp"
+            android:enabled="false"
+            android:visibility="gone" />
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="ОЧИСТИТЬ ЧАТ"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:background="#ff0055"
+        android:layout_marginTop="10dp" />
+    
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="#00ff88"
+        android:visibility="gone" />
+        
+    <ProgressBar
+        android:id="@+id/image_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="#ff8800"
+        android:visibility="gone" />
+    
+</LinearLayout>
